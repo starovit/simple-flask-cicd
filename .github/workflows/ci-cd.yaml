@@ -60,5 +60,5 @@ jobs:
           cat kustomization.yaml
 
       - name: Deploy updated Kubernetes resources
-      run: |
-        kubectl apply -f f
+        run: |
+          kubectl apply -k
