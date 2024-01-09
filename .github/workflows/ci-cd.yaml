@@ -56,9 +56,11 @@ jobs:
 
       - name: Deploy
         run: |
+          cd k8s
+          kustomize edit set namespace simple-flask
           kustomize edit set image simple-flask-cicd=$DOCKER_USERNAME/simple-flask-cicd:latest
           cat kustomization.yaml
 
       - name: Deploy updated Kubernetes resources
         run: |
-          kubectl apply -k
+          kubectl apply -k k8s/ 
