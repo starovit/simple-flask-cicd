@@ -15,7 +15,7 @@ spec:
         app: flask-cicd
     spec:
       containers:
-        - image: flask-cicd
+        - image: starovit/flask-cicd:latest 
           name: flask-cicd
           ports:
             - name: http

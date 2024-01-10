@@ -6,6 +6,6 @@ resources:
 - ingress.yaml
 namespace: flask-cicd
 images:
-- name: simple-flask-cicd
-  newName: starovit/simple-flask-cicd
+- name: flask-cicd
+  newName: starovit/flask-cicd
   newTag: latest

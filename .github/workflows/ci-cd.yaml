@@ -45,11 +45,11 @@ jobs:
       - name: Get the GKE credentials so we can deploy to the cluster
         run: |
           gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
+
       - name: Set up Kustomize
         run: |
           curl -sL "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.4.1/kustomize_v4.4.1_linux_amd64.tar.gz" | tar xz
           chmod u+x ./kustomize
-
       - name: Update Kubernetes resources
         run: |
           cd k8s
