@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+- ingress.yaml
+namespace: flask-cicd
+images:
+- name: flask-cicd
+  newName: starovit/flask-cicd
+  newTag: latest
